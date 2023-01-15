@@ -2,10 +2,9 @@ import speech_recognition as sr
 import webbrowser
 
 r = sr.Recognizer()
-mics = sr.Microphone.list_microphone_names()
 
 while(True):
-    with sr.Microphone(device_index=mics.index('Microfone (HyperX SoloCast)')) as source:
+    with sr.Microphone() as source:
         print("Diga alguma coisa...")
         audio = r.listen(source)
 
